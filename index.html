@@ -1,151 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Birthday Max 🎉</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+<meta charset="UTF-8">
+<title>Happy Birthday Max 🎉</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* SECTION BACKGROUNDS USING EXTERNAL IMAGE URLs */
-    #hero {
-      background: url('https://cdn.pixabay.com/photo/2016/11/23/14/45/balloons-1850086_1280.jpg') no-repeat center/cover;
-      padding: 100px 20px;
-      text-align: center;
-      color: white;
-    }
-    #slideshow-section {
-      background: url('https://cdn.pixabay.com/photo/2016/03/27/19/44/sky-1281679_1280.jpg') no-repeat center/cover;
-      padding: 60px 10%;
-    }
-    #story-section {
-      background: url('https://cdn.pixabay.com/photo/2014/12/16/22/25/sunset-570881_1280.jpg') no-repeat center/cover;
-      padding: 60px 10%;
-      color: white;
-    }
-    #poetry-section {
-      background: url('https://cdn.pixabay.com/photo/2017/01/20/00/30/clouds-1993808_1280.jpg') no-repeat center/cover;
-      padding: 60px 10%;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-    .card {
-      background: rgba(255,255,255,0.85);
-      border-radius: 20px;
-      padding: 30px;
-      margin-bottom: 40px;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
 
-    h1 { font-size: 60px; font-weight: bold; }
-    h2 { font-size: 32px; margin-bottom: 18px; text-align: center; }
+body{
+  color:#fff;
+  scroll-behavior:smooth;
+}
 
-    .slideshow img { width: 100%; border-radius: 12px; display: block; margin: 8px 0; }
+section{
+  min-height:100vh;
+  padding:80px 10%;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+}
 
-    .quote-final {
-      font-size: 22px;
-      text-align: center;
-      margin: 30px auto 10px;
-      font-style: italic;
-      color: #222;
-    }
+/* HERO */
+.hero{
+  background-image:
+  linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+  url("https://images.unsplash.com/photo-1513151233558-d860c5398176");
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
-    footer {
-      text-align: center;
-      padding: 28px;
-      background: #222;
-      color: #fff;
-      font-size: 20px;
-    }
+.hero h1{
+  font-size:4.5rem;
+  font-family:'Great Vibes', cursive;
+  color:#ffd369;
+}
 
-    .popup {
-      display: none;
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center; align-items: center;
-    }
-    .popup-content {
-      background: #fff; padding: 28px; border-radius: 18px; text-align: center;
-      max-width: 500px;
-    }
-  </style>
+.hero p{
+  margin-top:20px;
+  font-size:1.2rem;
+}
+
+/* BUTTON */
+.btn{
+  margin-top:40px;
+  padding:15px 35px;
+  background:#ffd369;
+  color:#000;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+}
+
+/* POPUP */
+.popup{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.8);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:1000;
+}
+
+.popup-content{
+  background:#111;
+  padding:40px;
+  max-width:600px;
+  border-radius:20px;
+  text-align:center;
+}
+
+/* SLIDESHOW */
+.slideshow{
+  background-image:
+  linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee");
+}
+
+.slideshow h2{
+  text-align:center;
+  font-size:3rem;
+  margin-bottom:40px;
+}
+
+.slider{
+  max-width:800px;
+  margin:auto;
+}
+
+.slide{
+  display:none;
+}
+
+.slide img{
+  width:100%;
+  border-radius:20px;
+}
+
+.caption{
+  text-align:center;
+  margin-top:15px;
+  color:#ffd369;
+}
+
+/* US SECTION */
+.us{
+  background-image:
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b");
+  display:flex;
+  align-items:center;
+  gap:50px;
+}
+
+.us img{
+  width:280px;
+  border-radius:20px;
+}
+
+/* POETRY */
+.poetry{
+  background-image:
+  linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("https://images.unsplash.com/photo-1519681393784-d120267933ba");
+  text-align:center;
+}
+
+.poetry p{
+  font-size:1.2rem;
+  line-height:2;
+  color:#ffd369;
+}
+
+/* FOOTER */
+footer{
+  background:#000;
+  text-align:center;
+  padding:30px;
+  color:#ffd369;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section id="hero">
-    <h1>🎂 Happy Birthday Max!</h1>
-    <p>To someone truly special ✨</p>
-  </section>
+<section class="hero">
+  <h1>Happy Birthday Max 🎉</h1>
+  <p>A page made just for you</p>
+  <button class="btn" onclick="openPopup()">Click here for a wish 💛</button>
+</section>
 
-  <!-- MESSAGE -->
-  <section>
-    <div class="card">
-      <h2>💌 A Special Wish</h2>
-      <button onclick="openWish()">Click to read</button>
-    </div>
-  </section>
-
-  <div class="popup" id="wishPopup" onclick="closeWish()">
-    <div class="popup-content">
-      <p style="font-size:18px;">
-        I know how incredibly hardworking you are
-        and how kind your heart naturally shines.
-        May every dream you chase find its way,
-        and every wish you’ve held come true.
-        Stay just as amazing as you already are. 💖
-      </p>
-      <small>(Click anywhere to close)</small>
-    </div>
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>For You, Max 🤍</h2>
+    <p>
+      I truly admire how hardworking and kind-hearted you are.
+      May life bless you with happiness, success, and peace.
+      May every prayer you’ve whispered find its way to reality,
+      and may you always remain the beautiful soul you are.
+    </p>
+    <br>
+    <button class="btn" onclick="closePopup()">Close</button>
   </div>
+</div>
 
-  <!-- SLIDESHOW -->
-  <section id="slideshow-section">
-    <div class="card">
-      <h2>📸 Moments of You</h2>
-      <div class="slideshow">
-        <img src="image1.jpeg" alt="Max Photo 1">
-        <img src="image2.jpeg" alt="Max Photo 2">
-        <img src="image3.jpeg" alt="Max Photo 3">
-      </div>
+<section class="slideshow">
+  <h2>Moments of You ✨</h2>
+  <div class="slider">
+
+    <div class="slide">
+      <img src="image1.jpeg" alt="Max">
+      <div class="caption">The class, the vibe you carry- is just Crazyy</div>
     </div>
-  </section>
 
-  <!-- OUR STORY -->
-  <section id="story-section">
-    <div class="card">
-      <h2>🤍 Our Little Story</h2>
-      <img src="us.jpeg" alt="Us Together" style="width:180px; border-radius:12px; display:block; margin: auto;">
-      <p style="margin-top:16px; font-size:18px;">
-        “From strangers on a trip to someone unforgettable —
-        some connections just feel right from the start.”
-      </p>
-      <p class="quote-final">
-        You inspire everyone around you simply by being real, gentle, and strong.
-      </p>
+    <div class="slide">
+      <img src="image2.jpeg" alt="Max">
+      <div class="caption">That smile which feels like home</div>
     </div>
-  </section>
 
-  <!-- POETRY -->
-  <section id="poetry-section">
-    <div class="card">
-      <h2>✨ Poetry for You</h2>
-      <p style="font-size:20px; text-align:center;">
-        Two months ago, you were just a name,<br>
-        A random trip that would never be the same.<br>
-        In every laugh and story we share,<br>
-        I found something beautiful and rare.<br>
-        You make every ordinary day feel bright,<br>
-        Simply by being your guiding light.
-      </p>
+    <div class="slide">
+      <img src="image3.jpeg" alt="Max">
+      <div class="caption">The cuteness that can make anyone happy</div>
     </div>
-  </section>
 
-  <footer>Yours Kiddoo! 💖</footer>
+  </div>
+</section>
 
-  <script>
-    function openWish() { document.getElementById('wishPopup').style.display = 'flex'; }
-    function closeWish() { document.getElementById('wishPopup').style.display = 'none'; }
-  </script>
+<section class="us">
+  <img src="us.jpeg" alt="Us">
+  <div>
+    <h2>Us 🤍</h2>
+    <p>
+      From strangers on a trip to daily conversations,
+      some connections grow quietly yet deeply —
+      and somehow, you became important faster than expected.
+    </p>
+  </div>
+</section>
+
+<section class="poetry">
+  <h2>Just a Few Lines for You</h2>
+  <p>
+    Two strangers met on an unplanned day,<br>
+    Never knowing life would change this way.<br>
+    In little time, in endless talks,<br>
+    You became a part of my daily thoughts.<br>
+    Some bonds are rare, simple, and true,<br>
+    And somehow, Sir- that turned out to be you.
+  </p>
+</section>
+
+<footer>
+  Yours Kiddoo! 💛
+</footer>
+
+<script>
+let index = 0;
+showSlides();
+
+function showSlides(){
+  let slides = document.getElementsByClassName("slide");
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display="none";
+  }
+  index++;
+  if(index > slides.length){ index = 1; }
+  slides[index-1].style.display="block";
+  setTimeout(showSlides, 3000);
+}
+
+function openPopup(){
+  document.getElementById("popup").style.display="flex";
+}
+function closePopup(){
+  document.getElementById("popup").style.display="none";
+}
+</script>
 
 </body>
 </html>
