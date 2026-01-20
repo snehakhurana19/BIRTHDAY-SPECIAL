@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Max 🎉</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      overflow-x: hidden;
+      color: #333;
+    }
+
+    /* Balloon Background */
+    body::before {
+      content: "🎈 🎉 🎂 🎁 🎈 🎉";
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      font-size: 40px;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 64px;
+      color: #ff4081;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      margin-bottom: 60px;
+    }
+
+    .card h2 {
+      color: #ff4081;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    /* Wish Popup */
+    .wish-btn {
+      display: inline-block;
+      background: #ff4081;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .wish-btn:hover {
+      background: #e73370;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    .popup-content {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      text-align: center;
+      animation: zoomIn 0.4s ease;
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.6); }
+      to { transform: scale(1); }
+    }
+
+    /* Slideshow */
+    .slideshow {
+      position: relative;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 100%;
+      border-radius: 20px;
+    }
+
+    .caption {
+      margin-top: 15px;
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Bond Section */
+    .bond {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .bond img {
+      width: 220px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .quote {
+      font-style: italic;
+      font-size: 22px;
+    }
+
+    /* Poetry */
+    .poetry {
+      font-family: 'Pacifico', cursive;
+      font-size: 26px;
+      line-height: 1.6;
+      color: #6a1b9a;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #ff4081;
+      color: #fff;
+      font-size: 20px;
+      font-family: 'Pacifico', cursive;
+    }
+
+    /* Scroll space */
+    .spacer {
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Happy Birthday Max 🎂</h1>
+    <p>To someone truly special ✨</p>
+  </header>
+
+  <section>
+    <div class="card" style="text-align:center;">
+      <h2>A Little Message for You</h2>
+      <div class="wish-btn" onclick="openWish()">Click here to read 💌</div>
+    </div>
+  </section>
+
+  <!-- Popup Wish -->
+  <div class="popup" id="wishPopup" onclick="closeWish()">
+    <div class="popup-content">
+      <p style="font-size:20px;">
+        I know how incredibly hardworking you are, and how naturally kind your heart is. May God bless you with endless happiness, strength for every dream you chase, and success in everything you pray for. I truly hope life gives you all that you wish for — and more. Just stay the beautiful soul you already are, always. 💖
+      </p>
+      <br>
+      <small>(Click anywhere to close)</small>
+    </div>
+  </div>
+
+  <section>
+    <div class="card">
+      <h2>Moments of You 📸</h2>
+      <div class="slideshow">
+        <div class="slide">
+          <img src="image1.jpg" alt="Max Photo 1">
+          <div class="caption">The smile that makes everything brighter</div>
+        </div>
+        <div class="slide">
+          <img src="image2.jpg" alt="Max Photo 2">
+          <div class="caption">Strong, focused, and full of dreams</div>
+        </div>
+        <div class="slide">
+          <img src="image3.jpg" alt="Max Photo 3">
+          <div class="caption">Being you — effortlessly amazing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Our Little Story 🤍</h2>
+      <div class="bond">
+        <img src="us.jpg" alt="Us Together">
+        <div class="quote">
+          "From strangers on a journey to a bond I never expected — proof that some connections don’t need time, just truth."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>For You, From My Heart ✨</h2>
+      <div class="poetry">
+        Two months ago, you were just a name,
+        <br>
+        A stranger I met, a moment so plain.
+        <br>
+        Now days feel lighter, nights feel kind,
+        <br>
+        Somehow you quietly stayed on my mind.
+        <br>
+        In little talks and shared truths we grew,
+        <br>
+        Proof that some bonds feel honest and new.
+      </div>
+    </div>
+  </section>
+
+  <div class="spacer"></div>
+
+  <footer>
+    Yours Kiddoo! 💖
+  </footer>
+
+  <script>
+    function openWish() {
+      document.getElementById('wishPopup').style.display = 'flex';
+    }
+
+    function closeWish() {
+      document.getElementById('wishPopup').style.display = 'none';
+    }
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 3000);
+    }
+  </script>
+
+</body>
+</html>
