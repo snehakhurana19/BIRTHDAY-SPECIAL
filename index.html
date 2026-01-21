@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Happy Birthday Max 🎉</title>
+<title>Happiest Birthday Mr. Max 🎉</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -90,27 +90,37 @@ section{
 .slideshow h2{
   text-align:center;
   font-size:3rem;
-  margin-bottom:40px;
-}
-
-.slider{
-  max-width:800px;
-  margin:auto;
+  margin-bottom:50px;
 }
 
 .slide{
   display:none;
+  align-items:center;
+  justify-content:center;
+  gap:40px;
+}
+
+.slide-content{
+  display:flex;
+  align-items:center;
+  gap:40px;
 }
 
 .slide img{
-  width:100%;
-  border-radius:20px;
+  width:260px;        /* SMALL IMAGE */
+  height:auto;
+  border-radius:18px;
+  box-shadow:0 0 25px rgba(255,211,105,.4);
 }
 
 .caption{
-  text-align:center;
-  margin-top:15px;
-  color:#ffd369;
+  max-width:400px;
+  font-size:1.4rem;   /* BIGGER TEXT */
+  line-height:1.6;
+  font-weight:500;
+  background:linear-gradient(90deg,#ffd369,#ffb703);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 /* US SECTION */
@@ -141,6 +151,27 @@ section{
   line-height:2;
   color:#ffd369;
 }
+  
+.closure{
+  background-image:
+  linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+  url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  text-align:center;
+  padding:120px 12%;
+}
+
+.closure h2{
+  font-size:3rem;
+  font-family:'Great Vibes', cursive;
+  color:#ffd369;
+  margin-bottom:30px;
+}
+
+.closure p{
+  font-size:1.3rem;
+  line-height:1.9;
+  color:#f1f1f1;
+}
 
 /* FOOTER */
 footer{
@@ -162,7 +193,7 @@ footer{
 
 <div class="popup" id="popup">
   <div class="popup-content">
-    <h2>For You, Max 🤍</h2>
+    <h2>For You 🤍</h2>
     <p>
       I truly admire how hardworking and kind-hearted you are.
       May life bless you with happiness, success, and peace.
@@ -176,25 +207,35 @@ footer{
 
 <section class="slideshow">
   <h2>Moments of You ✨</h2>
-  <div class="slider">
 
-    <div class="slide">
+  <div class="slide">
+    <div class="slide-content">
       <img src="image1.jpeg" alt="Max">
-      <div class="caption">The class, the vibe you carry- is just Crazyy</div>
+      <div class="caption">
+        The class, the innocence- you carry and a heart full of purpose.
+      </div>
     </div>
+  </div>
 
-    <div class="slide">
+  <div class="slide">
+    <div class="slide-content">
       <img src="image2.jpeg" alt="Max">
-      <div class="caption">That smile which feels like home</div>
+      <div class="caption">
+        That smile — holds the peace, even in chaos.
+      </div>
     </div>
+  </div>
 
-    <div class="slide">
+  <div class="slide">
+    <div class="slide-content">
       <img src="image3.jpeg" alt="Max">
-      <div class="caption">The cuteness that can make anyone happy</div>
+      <div class="caption">
+        The cuteness that can make anyone happy!
+       </div>
     </div>
-
   </div>
 </section>
+
 
 <section class="us">
   <img src="us.jpeg" alt="Us">
@@ -219,6 +260,18 @@ footer{
     And somehow, Sir- that turned out to be you.
   </p>
 </section>
+
+  <section class="closure">
+  <h2>Before This Page Ends…</h2>
+  <p>
+    This page may stop scrolling, but the wishes don’t.<br>
+    May your days be lighter, your dreams closer,<br>
+    and may life always meet you with kindness.<br><br>
+    Happy Birthday once again, Max —<br>
+    you truly deserve all the good coming your way.
+  </p>
+</section>
+
 
 <footer>
   Yours Kiddoo! 💛
